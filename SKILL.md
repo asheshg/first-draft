@@ -11,6 +11,8 @@ Use this skill to convert uploaded research into a branded presentation without 
 
 ## Workflow
 
+Resolve script and reference paths against this skill's directory, not the project working directory. Use absolute template paths in project deck specs. Read `references/runtime-limits.md` before extraction or rendering to check dependencies and distinguish supported output from builder instructions.
+
 1. Confirm inputs: research files, audience, presentation objective, deadline or length constraints, output formats, and whether the deck is for executive decision, sales, education, workshop, or readout.
 2. Resolve brand source:
    - Run `scripts/brand_store.py list` to show retained brands.
@@ -21,6 +23,7 @@ Use this skill to convert uploaded research into a branded presentation without 
 3. Extract source notes:
    - Run `scripts/extract_research.py <files...> --out <project>/research-notes.json`.
    - Preserve source file names, page/slide numbers when available, claims, evidence, and gaps.
+   - Inspect extraction warnings and empty results before storyboarding. These notes are previews, not complete transcriptions; inspect original sources for critical evidence and calculations.
 4. Read only the needed references:
    - `references/brand-extraction.md` when extracting brand rules.
    - `references/narrative-frameworks.md` when choosing story options.
@@ -52,6 +55,7 @@ Use this skill to convert uploaded research into a branded presentation without 
 - Let the uploaded research choose the story. Do not force a favorite framework.
 - Prefer a hybrid model: consulting frameworks for argument logic, and design-storytelling frameworks for audience journey, emotion, pacing, and visual experience.
 - Use `$consulting` for business structure when the task involves strategy, market analysis, operations, finance, transformation, M&A, or executive recommendations.
+  If that skill is unavailable, use the consulting structures in `references/narrative-frameworks.md` and disclose the limitation when specialist analysis is needed.
 - Use the source-grounded patterns in `references/narrative-frameworks.md` for narrative arc, persona, emotional journey, pacing, attention, comprehension, and experience design. Snyder supplies optional structural devices; Lupton connects action, emotion, and perception. These are adaptations for presentations, not proof that every deck needs a screenplay arc.
 - Do not invent conflict, setbacks, quotes, personas, or results to satisfy a story beat. Clearly label illustrative scenes and proposed future states.
 - When the user explicitly asks to use the book library, retrieve the relevant source sections before applying them. If a source is unavailable, disclose that limitation; do not silently substitute recollection or internet summaries.

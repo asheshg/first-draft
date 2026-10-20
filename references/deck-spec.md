@@ -23,8 +23,8 @@ Use this schema as the normalized handoff between research, storyboard, and rend
       "text": "#111111"
     },
     "fonts": {
-      "heading": "Aptos Display",
-      "body": "Aptos"
+      "heading": "Helvetica Neue",
+      "body": "Helvetica Neue"
     }
   },
   "narrative": {
