@@ -1,5 +1,7 @@
 # First Draft
 
+> **Moved:** The maintained version of this skill is now in [asheshg/skills — First Draft](https://github.com/asheshg/skills/tree/main/skills/first-draft). Follow its [current setup guide](https://github.com/asheshg/skills/blob/main/skills/first-draft/SETUP.md). This repository is retained for historical reference; the instructions below describe the legacy version.
+
 A Codex skill that turns research and brand guidelines into presentation storyboards, then builds the selected draft. It combines consulting argument structures with design-storytelling principles while keeping claims tied to research.
 
 ## Install
